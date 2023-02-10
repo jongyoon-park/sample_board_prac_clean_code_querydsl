@@ -1,0 +1,25 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: local
+  datasource:
+    url: jdbc:mariadb://localhost:3309/freeboard
+    username: root
+    password: password
+    driver-class-name: org.mariadb.jdbc.Driver
+    hikari:
+      max-lifetime: 170000
+      connection-timeout: 8000
+      maximum-pool-size: 30
+  jpa:
+    hibernate:
+    #      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+
+logging.level:
+  org.hibernate.SQL: debug
+
