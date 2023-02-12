@@ -190,6 +190,8 @@ DTO를 쓰면 순환 참조, DB 계층 노출 및 의존 생성, response의 불
 
 위의 이유로 DTO를 중심으로 사용하고, 최대한 setter를 사용하지 않은 이유입니다.
 
+DTO에 대한 정리글 : https://velog.io/@power0080/JPA%EC%8F%98%EC%95%84%EC%98%AC%EB%A6%B0-JPA%EC%9D%98-%EC%88%9C%ED%99%98-%EC%B0%B8%EC%A1%B0-JsonManagedReference%EC%97%90%EC%84%9C-%EB%B3%BC%EA%B9%8C-DTO%EB%A1%9C-%EB%B3%BC%EA%B9%8C 
+
 ### 2. Service와 Repository의 1대1 대응
 
 작성한 코드를 보시면 UserService에서 BoardRepository를 호출해 Board의 값을 바꾸거나 조회하지 않습니다. UserService에서 Board에 대한 값이 필요하면 BoardService를 호출해 받아옵니다. Board와 관련된 로직, DB 접근은 오로지 BoardService의 책임으로 분리를 함으로써 DB의 변경에 대해 변경이 발생한 지점을 명확하게 파악하고 하나의 로직에 대해 단일 책임을 더욱 더 강화했습니다.
